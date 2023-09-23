@@ -168,6 +168,7 @@ const PostCard = ({post, CurrUserId}) => {
         setToShowOnHover(false);
       }
     }, 500);
+
     return ( 
       <div className='relative' onMouseLeave={handleMove}>
   {toShowOnHover &&    <ProfileCard userIdToVisit={post?.UserId} userNameToVisit={post?.User?.firstName}  />}
@@ -188,7 +189,7 @@ const PostCard = ({post, CurrUserId}) => {
             </div> 
             
             <p className='mb-4'>{post?.body}</p>
-        {post?.image!==0?  <img src={post?.image}  alt='feed-im'></img>:"" }
+        {post?.image!=="0"?  <img src={post?.image}  alt='feed-im' />:"" }
             <div className='flex justify-around gap-2 items-center mb-4'>
                 <p className='font-semibold text-lg text-[grey]'>{post?.numLikes} Likes</p>
                 <p className='font-semibold text-lg text-[grey]'>{post?.comments?.length} Comments</p>

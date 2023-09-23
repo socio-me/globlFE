@@ -45,6 +45,7 @@ function App() {
         if(!not?.is_read)
         {
           cnt++;
+          
         }
       })
       setNotCount(cnt);

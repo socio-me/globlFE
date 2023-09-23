@@ -38,8 +38,15 @@ export const getAllPosts = createAsyncThunk(
     'posts/getAll',
     async (_, thunkAPI) => {
       try {
-        const response = await axios.get(`${BASE_URL}/posts/all`);
-        return response.data;
+        const response = await axios.get(`${BASE_URL}/posts/all`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      } );
+        console.log("RESP>>", response);
+        return response?.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error?.response?.data?.error);
       }
@@ -49,7 +56,13 @@ export const getAllPosts = createAsyncThunk(
     'posts//my-posts/:id',
     async (userId, thunkAPI) => {
       try {
-        const response = await axios.get(`${BASE_URL}/posts//my-posts/${userId}`);
+        const response = await axios.get(`${BASE_URL}/posts//my-posts/${userId}`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      });
         return response.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error?.response?.data?.error);

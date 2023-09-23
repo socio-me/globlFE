@@ -24,8 +24,8 @@ const FriendDropDown = () => {
              <input type="text" placeholder="Search friend here..." className="outline-none px-2 mb-4 py-1 border-[#aeaeae] border text-sm rounded-xl w-full"></input>
             <div>
                 <h2 className="font-semibold">Friends</h2>
-                {friendList?.map(f=>(
-                    <FriendList friend={f} />
+                {friendList?.map((f,id)=>(
+                    <FriendList friend={f} key={id} />
                 ))}
                
             </div>

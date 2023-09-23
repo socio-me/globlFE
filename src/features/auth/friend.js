@@ -31,7 +31,13 @@ export const addFriend=createAsyncThunk('friends/add', async (friendsData,thunkA
 export const getAllFriendReq= createAsyncThunk ('friends/all', async (friendsPayload, thunkAPI)=>{
     const {userId}=friendsPayload
     try {
-         const apiRes= await axios.get(`${BASE_URL}/friends/${userId}/all`)
+         const apiRes= await axios.get(`${BASE_URL}/friends/${userId}/all`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      })
          return apiRes.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error?.response?.data?.error)
@@ -40,7 +46,13 @@ export const getAllFriendReq= createAsyncThunk ('friends/all', async (friendsPay
 export const getAllFriendS= createAsyncThunk ('friends/allFriends', async (friendsPayload, thunkAPI)=>{
     const {userId}=friendsPayload
     try {
-         const apiRes= await axios.get(`${BASE_URL}/friends/${userId}/friends`)
+         const apiRes= await axios.get(`${BASE_URL}/friends/${userId}/friends`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      })
          return apiRes.data;
     } catch (error) {
         return thunkAPI.rejectWithValue(error?.response?.data?.error)

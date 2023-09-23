@@ -27,10 +27,9 @@ const Feed = () => {
 
 
      useEffect(()=>{
-      const payload={
-        userId: JSON.parse(localStorage.getItem('currentUser')).userId,
-      }
-    
+       const payload={
+         userId: JSON.parse(localStorage.getItem('currentUser')).userId,
+        }
          dispatch(getAllPosts());
          dispatch(getAllFriendReq(payload));
      },[])
@@ -46,7 +45,7 @@ const Feed = () => {
         <div className="flex justify-around ml-2 ">
             <div className=" flex-col w-[57%]   ">
                 <WritePost/>
-            { postData?.posts.map((post,index)=>(
+            {postData?.posts?.map((post,index)=>(
                    <PostCard post={post} key={index}/>
              ))}
                

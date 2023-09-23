@@ -19,7 +19,13 @@ export const getMyProfile = createAsyncThunk(
     async (userId, thunkAPI) => {
         
       try {
-        const response = await axios.get(`${BASE_URL}/profile/getProfile/${userId}`);
+        const response = await axios.get(`${BASE_URL}/profile/getProfile/${userId}`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      });
         console.log("API RESPONSE DATA:", response);
         return response.data;
       } catch (error) {
