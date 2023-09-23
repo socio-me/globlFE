@@ -149,7 +149,7 @@ const PostCard = ({post, CurrUserId}) => {
       if (!toShowOnHover ) {
          if(!CurrUserId)
          {
-          if(userId!=hoveringOn)
+          if(userId!==hoveringOn)
           {
             setToShowOnHover(true)
           }
@@ -188,7 +188,7 @@ const PostCard = ({post, CurrUserId}) => {
             </div> 
             
             <p className='mb-4'>{post?.body}</p>
-        {post?.image!=0?  <img src={post?.image}  alt='feed-im'></img>:"" }
+        {post?.image!==0?  <img src={post?.image}  alt='feed-im'></img>:"" }
             <div className='flex justify-around gap-2 items-center mb-4'>
                 <p className='font-semibold text-lg text-[grey]'>{post?.numLikes} Likes</p>
                 <p className='font-semibold text-lg text-[grey]'>{post?.comments?.length} Comments</p>
