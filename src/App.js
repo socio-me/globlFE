@@ -68,9 +68,6 @@ function App() {
     {
       socket.emit('addSocketToDB',{userId: userData?.userId, socketId: socket?.id})
     }
-    
-
-   
 
 
     socket.on('notification', (data) => {
@@ -89,13 +86,9 @@ function App() {
 
 }, []);
 
-
-   // create browser router -- routes createb
    
   return (
     <div className="App w-[100%] box-content">
-         
-
                 {/* <Navbar /> */}
                 <ToastContainer />
                   <Routes >
