@@ -8,7 +8,7 @@ const FriendReq = ({friendReqList}) => {
                <h2 className=" font-bold text-sm text-[#333]">Friend Requests: </h2>
                <h4 className="text-blue-500 font-medium text-sm">See All</h4>
            </div>
-           {friendReqList.length>0 ?     <div className='max-h-[40vh] overflow-y-scroll custom-scrollbar '>
+           {friendReqList?.length>0 ?     <div className='max-h-[40vh] overflow-y-scroll custom-scrollbar '>
              {friendReqList?.map(friend=>(
                  <FriendReqCard friend={friend} />
            ))}

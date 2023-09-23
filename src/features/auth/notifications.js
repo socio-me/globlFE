@@ -18,7 +18,13 @@ export const getMyNotifications = createAsyncThunk(
     'notifications/my-notification/:id',
     async (userId, thunkAPI) => {
       try {
-        const response = await axios.get(`${BASE_URL}/notifications/my-notification/${userId}`);
+        const response = await axios.get(`${BASE_URL}/notifications/my-notification/${userId}`,{
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                'ngrok-skip-browser-warning': 'true'
+              }
+      });
         return response.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error?.response?.data?.error);
