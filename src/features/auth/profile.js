@@ -64,7 +64,6 @@ const profileSlice=createSlice({
 
 
 
-export const {
-}=profileSlice.actions;
+
 
 export default profileSlice.reducer;

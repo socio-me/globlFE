@@ -123,8 +123,7 @@ const friendSlice=createSlice({
     }
 })
 
-export const {
-  } = friendSlice.actions;
+
 
   export default friendSlice.reducer;
   

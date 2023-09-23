@@ -39,7 +39,7 @@ const Features = () => {
         <div className="flex flex-col md:flex-row justify-center md:justify-around items-center">
           <img
             src={feature1}
-            alt="image"
+            alt="imge"
             className="w-8/12 md:w-2/5 h-auto text-center"
           />
           <div className="w-11/12 md:w-3/5 mx-auto my-4 md:my-auto">
@@ -65,7 +65,7 @@ const Features = () => {
           </div>
           <img
             src={feature1}
-            alt="image"
+            alt="imige"
             className="w-11/12 md:w-2/5 h-auto text-center"
           />
         </div>
@@ -82,7 +82,7 @@ const Features = () => {
           </div>
           <img
             src={feature1}
-            alt="image"
+            alt="iopage"
             className="h-auto mx-auto md:w-[30%] w-[60%] "
           ></img>
         </div>

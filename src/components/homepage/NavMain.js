@@ -1,7 +1,6 @@
 import Logoname from "../Logoname";
 import SearchBar from "../common-components/SearchBar";
 import guest from '../../assets/Avatar.svg'
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 
 const NavMain = () => {
@@ -20,7 +19,7 @@ const NavMain = () => {
             </div>
             <div className="flex gap-3 items-center">
                 <h2 className="font-semibold text-lg ">{user}</h2>
-                 <img src={guest} className="rounded 2xl" width="40px"></img>
+                 <img src={guest} className="rounded 2xl" alt="nav" width="40px"></img>
             </div>
 
             </div>
